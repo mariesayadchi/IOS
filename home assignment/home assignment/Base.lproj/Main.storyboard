@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="home_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your weight here kg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4h-Oc-KWZ">
+                                <rect key="frame" x="210" y="128" width="178" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your height here cm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itx-0c-Rdb">
+                                <rect key="frame" x="204" y="195" width="184" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2l-YC-lsL">
+                                <rect key="frame" x="282" y="285" width="46" height="30"/>
+                                <state key="normal" title="next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bjb-Fc-LG0" kind="show" id="pUY-UL-0no"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k2l-YC-lsL" firstAttribute="top" secondItem="itx-0c-Rdb" secondAttribute="bottom" constant="60" id="CSq-WG-xEM"/>
+                            <constraint firstAttribute="centerX" secondItem="k2l-YC-lsL" secondAttribute="centerX" id="EW7-8L-ZTC"/>
+                            <constraint firstAttribute="centerX" secondItem="E4h-Oc-KWZ" secondAttribute="centerX" id="Hwt-f4-l6o"/>
+                            <constraint firstAttribute="centerX" secondItem="itx-0c-Rdb" secondAttribute="centerX" id="T9Q-Or-JhM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="264"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xsB-Ie-AgE">
+            <objects>
+                <viewController id="bjb-Fc-LG0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lzb-s4-c6j"/>
+                        <viewControllerLayoutGuide type="bottom" id="oWU-TE-OCc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ICf-T7-M5m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-l4-uFA">
+                                <rect key="frame" x="149" y="119" width="237" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Female" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6Q-wH-Fb0">
+                                <rect key="frame" x="55" y="123" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Male" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCF-kh-mJ0">
+                                <rect key="frame" x="408" y="123" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W3-hm-23B">
+                                <rect key="frame" x="244" y="253" width="46" height="30"/>
+                                <state key="normal" title="next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="yCF-kh-mJ0" secondAttribute="centerY" constant="166.5" id="9Ui-IY-ReF"/>
+                            <constraint firstItem="A6Q-wH-Fb0" firstAttribute="leading" secondItem="ICf-T7-M5m" secondAttribute="leadingMargin" constant="55" id="Ac2-sC-YKy"/>
+                            <constraint firstItem="yCF-kh-mJ0" firstAttribute="leading" secondItem="PwR-l4-uFA" secondAttribute="trailing" constant="24" id="EYm-VI-sOM"/>
+                            <constraint firstAttribute="centerY" secondItem="A6Q-wH-Fb0" secondAttribute="centerY" constant="166.5" id="Fxy-R0-KUR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yCF-kh-mJ0" secondAttribute="trailing" constant="134" id="Gei-7e-x7A"/>
+                            <constraint firstItem="3W3-hm-23B" firstAttribute="top" secondItem="PwR-l4-uFA" secondAttribute="bottom" constant="60" id="Hzy-pg-jS8"/>
+                            <constraint firstItem="oWU-TE-OCc" firstAttribute="top" secondItem="A6Q-wH-Fb0" secondAttribute="bottom" constant="456" id="N9Q-5S-OMh"/>
+                            <constraint firstItem="oWU-TE-OCc" firstAttribute="top" secondItem="yCF-kh-mJ0" secondAttribute="bottom" constant="456" id="RQb-z0-345"/>
+                            <constraint firstItem="PwR-l4-uFA" firstAttribute="leading" secondItem="A6Q-wH-Fb0" secondAttribute="trailing" constant="21" id="Ruz-m5-cL4"/>
+                            <constraint firstItem="A6Q-wH-Fb0" firstAttribute="top" secondItem="Lzb-s4-c6j" secondAttribute="bottom" constant="103" id="Stp-U5-dhh"/>
+                            <constraint firstItem="yCF-kh-mJ0" firstAttribute="top" secondItem="Lzb-s4-c6j" secondAttribute="bottom" constant="103" id="ZWK-7Q-bA9"/>
+                            <constraint firstAttribute="centerX" secondItem="A6Q-wH-Fb0" secondAttribute="centerX" constant="199.5" id="iZL-2R-tc6"/>
+                            <constraint firstAttribute="centerX" secondItem="3W3-hm-23B" secondAttribute="centerX" id="sOa-om-Y5N"/>
+                            <constraint firstAttribute="centerX" secondItem="yCF-kh-mJ0" secondAttribute="centerX" constant="-129" id="ulg-nu-zow"/>
+                            <constraint firstAttribute="centerX" secondItem="PwR-l4-uFA" secondAttribute="centerX" id="v5s-XW-hYT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfQ-8N-gGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="264"/>
+        </scene>
+    </scenes>
+</document>
