@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bjb-Fc-LG0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,11 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your weight here kg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4h-Oc-KWZ">
-                                <rect key="frame" x="210" y="128" width="178" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your height here cm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itx-0c-Rdb">
                                 <rect key="frame" x="204" y="195" width="184" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -33,14 +27,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your weight here kg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4h-Oc-KWZ">
+                                <rect key="frame" x="210" y="128" width="178" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="63" y="109" width="178" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.85555211838394774" green="0.97006211363332584" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="k2l-YC-lsL" firstAttribute="top" secondItem="itx-0c-Rdb" secondAttribute="bottom" constant="60" id="CSq-WG-xEM"/>
-                            <constraint firstAttribute="centerX" secondItem="k2l-YC-lsL" secondAttribute="centerX" id="EW7-8L-ZTC"/>
-                            <constraint firstAttribute="centerX" secondItem="E4h-Oc-KWZ" secondAttribute="centerX" id="Hwt-f4-l6o"/>
-                            <constraint firstAttribute="centerX" secondItem="itx-0c-Rdb" secondAttribute="centerX" id="T9Q-Or-JhM"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,68 +55,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-l4-uFA">
-                                <rect key="frame" x="173" y="293" width="237" height="1"/>
-                            </slider>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W3-hm-23B">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W3-hm-23B">
                                 <rect key="frame" x="268" y="427" width="46" height="30"/>
                                 <state key="normal" title="next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="185" y="427" width="30" height="30"/>
+                                </variation>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="female" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDi-nF-8df">
-                                <rect key="frame" x="113" y="297" width="63" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I will tell you how much weight you should loose to be fit!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G4-Wx-CTP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I will tell you how much weight you should loose to be fit!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G4-Wx-CTP">
                                 <rect key="frame" x="113" y="102" width="437" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-16" y="89" width="437" height="78"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Answer the fields!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNn-J3-Xq5">
                                 <rect key="frame" x="242" y="165" width="136" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="132" y="165" width="136" height="21"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="male" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCb-p9-VtF">
-                                <rect key="frame" x="421" y="297" width="42" height="21"/>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tfs-gk-kBU">
+                                <rect key="frame" x="240" y="285" width="118" height="31"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="135" y="285" width="129" height="31"/>
+                                </variation>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="male" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXb-wB-Omc">
+                                <rect key="frame" x="382" y="289" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="289" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="female" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0D-Ry-WEM">
+                                <rect key="frame" x="159" y="289" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="77" y="289" width="58" height="21"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.78532191449349209" green="0.92709253154933979" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                         <constraints>
-                            <constraint firstItem="PwR-l4-uFA" firstAttribute="top" secondItem="wNn-J3-Xq5" secondAttribute="bottom" constant="107" id="EeG-Em-VCT"/>
-                            <constraint firstItem="oCb-p9-VtF" firstAttribute="leading" secondItem="PwR-l4-uFA" secondAttribute="trailing" constant="13" id="Gsc-Y2-80A"/>
-                            <constraint firstItem="3W3-hm-23B" firstAttribute="top" secondItem="PwR-l4-uFA" secondAttribute="bottom" constant="104" id="HXG-Gl-AZA"/>
-                            <constraint firstItem="oWU-TE-OCc" firstAttribute="top" secondItem="oCb-p9-VtF" secondAttribute="bottom" constant="282" id="IEg-um-IK0"/>
-                            <constraint firstItem="oWU-TE-OCc" firstAttribute="top" secondItem="3W3-hm-23B" secondAttribute="bottom" constant="143" id="Oao-2o-XeC"/>
-                            <constraint firstItem="8G4-Wx-CTP" firstAttribute="top" secondItem="Lzb-s4-c6j" secondAttribute="bottom" constant="82" id="RZM-SD-ygr"/>
-                            <constraint firstItem="PwR-l4-uFA" firstAttribute="top" secondItem="WDi-nF-8df" secondAttribute="bottom" constant="8" id="Uno-3d-npJ"/>
-                            <constraint firstItem="WDi-nF-8df" firstAttribute="top" secondItem="8G4-Wx-CTP" secondAttribute="bottom" constant="174" id="bGA-5t-Ocz"/>
-                            <constraint firstItem="oCb-p9-VtF" firstAttribute="leading" secondItem="WDi-nF-8df" secondAttribute="trailing" constant="245" id="ejI-Du-kWz"/>
-                            <constraint firstItem="wNn-J3-Xq5" firstAttribute="top" secondItem="8G4-Wx-CTP" secondAttribute="bottom" constant="42" id="erz-SJ-PTb"/>
-                            <constraint firstItem="wNn-J3-Xq5" firstAttribute="top" secondItem="8G4-Wx-CTP" secondAttribute="bottom" constant="42" id="fAH-fb-1no"/>
-                            <constraint firstAttribute="centerX" secondItem="8G4-Wx-CTP" secondAttribute="centerX" id="ffQ-qG-vhf"/>
-                            <constraint firstAttribute="centerX" secondItem="3W3-hm-23B" secondAttribute="centerX" id="gT3-xK-6DY"/>
-                            <constraint firstAttribute="centerX" secondItem="wNn-J3-Xq5" secondAttribute="centerX" id="jD7-cF-Rz0"/>
-                            <constraint firstItem="oWU-TE-OCc" firstAttribute="top" secondItem="WDi-nF-8df" secondAttribute="bottom" constant="282" id="jbH-cY-sv5"/>
-                            <constraint firstItem="WDi-nF-8df" firstAttribute="leading" secondItem="ICf-T7-M5m" secondAttribute="leadingMargin" constant="97" id="ldt-sl-Zla"/>
-                            <constraint firstItem="oCb-p9-VtF" firstAttribute="top" secondItem="8G4-Wx-CTP" secondAttribute="bottom" constant="174" id="q7a-qT-HJz"/>
-                            <constraint firstItem="oCb-p9-VtF" firstAttribute="top" secondItem="PwR-l4-uFA" secondAttribute="bottom" constant="8" id="tuj-aV-rWB"/>
-                            <constraint firstAttribute="centerX" secondItem="PwR-l4-uFA" secondAttribute="centerX" id="uaz-gB-ed8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oCb-p9-VtF" secondAttribute="trailing" constant="121" id="zTv-QS-6gp"/>
+                            <constraint firstItem="3W3-hm-23B" firstAttribute="top" secondItem="Tfs-gk-kBU" secondAttribute="bottom" constant="112" id="IUa-g0-5Mc"/>
+                            <constraint firstItem="Tfs-gk-kBU" firstAttribute="top" secondItem="wNn-J3-Xq5" secondAttribute="bottom" constant="99" id="z6l-uv-9ie"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="z6l-uv-9ie"/>
+                                <exclude reference="IUa-g0-5Mc"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="z6l-uv-9ie"/>
+                                <include reference="IUa-g0-5Mc"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfQ-8N-gGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="237"/>
+            <point key="canvasLocation" x="312" y="237"/>
         </scene>
     </scenes>
 </document>
